@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   position: relative;
+  width: 100vw;
 }
 
 a {
@@ -42,7 +47,7 @@ a {
   font-size: 2rem;
 }
 .navbar .navbar-toggler {
-  margin-top: 25px;
+  margin-top: 10px;
   margin-bottom: 10px;
   color: #fff;
   font-size: 2rem;
@@ -160,6 +165,33 @@ a {
   z-index: 10;
 }
 
+@media only screen and (max-width: 411px) {
+  .navbar {
+    width: 100vw;
+    height: 15vh;
+  }
+  .navbar .container-fluid {
+    margin-top: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #hero {
+    width: 100vw;
+    background-color: #345182;
+    height: 88vh;
+  }
+
+  .navbar-nav {
+    width: 90%;
+  }
+
+  .wave {
+    top: 5.7%;
+  }
+}
 @media only screen and (max-width: 768px) {
   #hero {
     padding: 3rem 1rem 3rem 1rem;
@@ -560,4 +592,58 @@ a {
 }
 #footer #upper-text {
   margin-left: 120px;
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar {
+    width: 100vw;
+  }
+  .navbar .navbar-toggler {
+    margin-top: 0;
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  #hero {
+    width: 100vw;
+    background-color: #345182;
+    height: 88vh;
+  }
+
+  .navbar-nav {
+    width: 90%;
+  }
+
+  .wave {
+    top: 5.7%;
+    display: none;
+    left: 70%;
+  }
+
+  #services {
+    margin-top: 40px;
+    padding: 5rem 0;
+  }
+  #services .card {
+    margin-left: 50px;
+  }
+
+  #myBtn {
+    bottom: 20px;
+    right: 10px;
+  }
+
+  #why_us {
+    width: 100vw;
+  }
+
+  #about {
+    width: 100vw;
+  }
+  #about #about_img img {
+    width: 100%;
+    height: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

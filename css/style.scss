@@ -7,12 +7,18 @@ $grey:#eee ;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    // overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body{
     scroll-behavior: smooth;
     overflow-x: hidden;
     position: relative;
+    width: 100vw;
 }
 
 a{
@@ -38,7 +44,8 @@ a{
         background-color: #555;
       }
   }
-  
+
+
 
 // Navbar 
 .navbar {
@@ -50,7 +57,7 @@ a{
         font-size: 2rem;
     }
     .navbar-toggler{
-        margin-top: 25px;
+        margin-top: 10px;
         margin-bottom: 10px;
         color: $white;
         font-size: 2rem;
@@ -171,6 +178,31 @@ a{
     left: 0;
     z-index: 10;
 }
+@media only screen and (max-width: 411px) {
+    .navbar{
+        width: 100vw;
+        height: 15vh;
+        .container-fluid{
+            margin-top: 20px;
+        }
+    }
+    body {
+        overflow-x: hidden;
+    }
+    #hero {
+        width: 100vw;
+        background-color: $blue;
+        height: 88vh;
+    }
+    .navbar-nav{
+        width: 90%;
+    }
+    .wave {
+        top: 5.7%;
+    }
+}
+
+
 
 @media only screen and (max-width: 768px) {
     #hero {
@@ -274,6 +306,7 @@ a{
         width:70%;
     }
 }
+
 
 // Why us 
 
@@ -595,4 +628,54 @@ a{
     #upper-text {
         margin-left: 120px;
     }
+}
+
+// Media query 
+
+@media only screen and (max-width: 360px) {
+    .navbar{
+        width: 100vw;
+        .navbar-toggler{
+            margin-top: 0;
+        }
+    }
+    body {
+        width: 100vw;
+        
+    }
+    #hero {
+        width: 100vw;
+        background-color: $blue;
+        height: 88vh;
+    }
+    .navbar-nav{
+        width: 90%;
+    }
+    .wave {
+        top: 5.7%;
+        display: none;
+        left: 70%;
+    }
+    #services{
+        margin-top: 40px;
+        padding: 5rem 0;
+        .card {
+            margin-left: 50px;
+        }
+    }
+    #myBtn {
+        bottom: 20px;
+        right: 10px;
+ 
+      }
+      #why_us{
+          width: 100vw;
+      }
+      #about{
+          width: 100vw;
+          #about_img img{
+              width: 100%;
+              height: 100%;
+          }
+      }
 }
