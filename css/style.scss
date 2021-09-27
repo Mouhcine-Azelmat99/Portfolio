@@ -1,0 +1,598 @@
+$black : black;
+$white : #fff;
+$blue : #345182;
+$grey:#eee ;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+// Back top top 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 4px;
+    &:hover {
+        background-color: #555;
+      }
+  }
+  
+
+// Navbar 
+.navbar {
+    height: 12vh;
+    background: $blue;
+    padding: 10px 20px;
+
+    .navbar-brand{
+        font-size: 2rem;
+    }
+    .navbar-toggler{
+        margin-top: 25px;
+        margin-bottom: 10px;
+        color: $white;
+        font-size: 2rem;
+    }
+    .navbar-nav{
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: 20px;
+        li a{
+            color: $black;
+            margin-left: 15px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            transition: 0.1s ease-in-out;
+            position: relative;
+            padding: 5px 4px;
+            margin-left: 25px;
+            &:hover{
+                opacity: .7;
+                &::after{
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    content: "";
+                    width: 100%;
+                    height: 3px;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+
+    .navbar-toggler{
+        margin-top: 10px;
+    }
+
+    .navbar-nav{
+        position: absolute;
+        width: 90%;
+        left: 0;
+        z-index: 4;
+        border-radius: 20px;
+        background-color: $white;
+        li{
+            padding-left: 10px;
+           margin: 20px 0;
+           a{
+               margin-left: 0;
+               color: $black !important;
+           }
+        }
+        
+    }
+}
+
+
+// hero 
+
+#hero {
+    position: relative;
+    background-color: $blue;
+    height: 100vh;
+    color: $white;
+    padding-bottom: 5rem;
+    .content{
+        padding: 6rem 3rem;
+        z-index: 222;
+        h1{
+            font-size: 3.3rem;
+            margin-bottom: 15px;
+        }
+        h3{
+            font-size: 1.6rem;
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .link{
+            cursor: pointer;
+            z-index: 200;
+            margin-bottom: 4rem;
+            padding: 20px 0;
+        } a{
+            text-decoration: none;
+            font-size: 2.3rem;
+            border: 1px solid $white;
+            color: $white;
+            border-radius: 20px;
+            padding: 8px 20px;
+            transition: 1s ease-in-out;
+            z-index: 200;
+            span{
+                margin-left: 10px;
+            }
+            &:hover{
+                background-color: $white;
+                color: $blue;
+                border: none;
+                span{
+                    color: $white;
+                }
+            }
+        }
+    }
+    #img_slid{
+        margin-top: 100px;
+          img{
+        width: 100%;
+    }
+}
+}
+.wave{
+    margin-top: 3rem;
+    position: absolute;
+    top: 5%;
+    left: 0;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+    #hero {
+        padding:3rem 1rem 3rem 1rem ;
+        .content {
+            margin-top: 30px;
+            padding: 60px 20px;
+            h1{
+                font-size: 1.9rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+            .link {
+                margin-top: 20px;
+                 a{
+                    font-size: 1.6rem;
+                    padding: 7px 20px;
+                    z-index: 110;
+                    
+            }
+        }
+        }
+        #img_slid{
+            margin-top: -100px;
+        img{
+            height: 230px;
+        }
+        }
+    }
+    .wave{
+        bottom: 0px;
+    }
+}
+
+
+// Services 
+
+#services{
+    padding: 5rem 0;
+    color: $black;
+    h1{
+    text-align: center;
+    color: $blue;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    &::after{
+        position: absolute;
+        left: 42%;
+        content: "";
+        top: 100%;
+        width: 15%;
+        height: 3px;
+        background-color: $blue;
+    }
+    }
+    .card{
+        text-align: center;
+        padding: 20px 0;
+        transition: .8s ease-in-out;
+        h1{
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+            &::after{
+                position: absolute;
+                left: 25%;
+                content: "";
+                top: 100%;
+                width: 50%;
+                height: 3px;
+                background-color: $blue;
+            }
+        }
+        p{
+            margin: 10px;
+        }
+        h3{
+            font-size: 5rem;
+            transition: 1s ease-in-out;
+            &:hover{
+                color: $blue;
+            }
+        }
+        &:hover{
+            box-shadow: 0px 0px 8px 0px $black;
+            transform: scale(1.2);
+            z-index: 10;
+            h3{
+                color: $blue;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #services .card{
+        margin-left: 5rem;
+        margin-bottom: 15px;
+        width:70%;
+    }
+}
+
+// Why us 
+
+#why_us{
+    background-color: $grey;
+    padding: 5rem 5rem;
+    color: $black;
+    h1{
+    text-align: center;
+    color: $blue;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    &::after{
+        position: absolute;
+        left: 42%;
+        content: "";
+        top: 100%;
+        width: 15%;
+        height: 3px;
+        background-color: $blue;
+    }
+    }
+    #content{
+        margin: 20px 0;
+        h2{
+            font-size: 2rem;
+            color: $blue;
+        }
+        p{
+            span{
+                font-size: 3rem;
+                color: $blue;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+        font-size: 1.4rem;
+        }
+    }
+    #img{
+        position:relative;
+        .overlay{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(11, 11, 12);
+            opacity: .6;
+            z-index: 19;
+        }
+        img{
+            position: absolute;
+            top: 10%;
+            width: 100%;
+            height: 90%;
+        }
+    }
+}
+
+#skills{
+    padding: 5rem 2rem;
+    .img img{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+    }
+    #skil_main{
+        h1{
+            color: $blue;
+            margin-bottom: 20px;
+        }
+        .skil{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// pricing 
+
+#pricing{
+    padding: 5rem 2rem;
+    background-color: $grey;
+    color: $black;
+    h1{
+        text-align: center;
+        color: $blue;
+        margin-bottom: 70px;
+        position: relative;
+        padding-bottom: 10px;
+        &::after{
+            position: absolute;
+            left: 45%;
+            content: "";
+            top: 100%;
+            width: 10%;
+            height: 3px;
+            background-color: $blue;
+        }
+        }
+    #item{
+        background-color: $white;
+        padding: 20px 0;
+        margin-right: 15px;
+        width: 420px;
+        border-radius: 20px;
+        text-align: center;
+        margin-bottom: 15px;
+        transition: .4s ease-in-out;
+        .header{
+            margin-bottom: 20px;
+            h3{
+                font-size: 1.8rem;
+                color: $blue;
+            }
+            h1{
+                font-size: 1.7rem;
+                font-weight: bold;
+                span{
+                    color: $blue;
+                    font-size: 1.5;
+                }
+            }
+            p{
+                margin-top: -30px;
+                font-style: italic;
+                color: grey;
+            }
+        }
+        .infos{
+            p{
+                
+                font-size: 1.26rem;
+                i{
+                    margin-right: 15px;
+                    text-align: left;
+                }
+            }
+        }
+        button{
+            padding: 8px 12px;
+            background-color: $blue;
+            font-size: 1.7rem;
+            color: $white;
+            border-radius: 15px;
+            transition: .4s ease-in-out;
+            &:hover{
+                background-color: $white;
+                color: $blue;
+                border: $blue 1px solid;
+            }
+        }
+        &:hover{
+            transform: translateY(-30px);
+            background-color: rgb(201, 203, 204);
+        }
+    }
+}
+
+// Team
+.container {
+    padding-top: 20px;
+    h1{
+        text-align: center;
+        color: $blue;
+        position: relative;
+        padding-bottom: 10px;
+        &::after{
+            position: absolute;
+            left: 45%;
+            content: "";
+            top: 100%;
+            width: 10%;
+            height: 3px;
+            background-color: $blue;
+        }
+        }
+.owl-carousel{
+    padding: 5rem 0;
+    margin-bottom: 30px;
+    .card{
+        // margin-left: 10px;
+        padding: 10px 40px;
+        width: 100%;
+        background-color: $grey;
+        border-radius: 30px;
+        img{
+            transform: scale(0.6);
+        }
+        .card-body{
+            padding: 0;
+        }
+        .card-footer{
+            padding-top: 10px;
+            .social{
+                text-align: center;
+                a{
+                    margin-right: 20px;
+                    font-size: 2rem;
+                    color: $blue;
+                    transition: .4s ease-in-out;
+                    &:hover{
+                        opacity: .6;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+// about 
+
+#about{
+    padding: 4rem 2rem;
+    background-color: $grey;
+    h1{
+        text-align: center;
+        color: $blue;
+        margin-bottom: 70px;
+        position: relative;
+        padding-bottom: 10px;
+        &::after{
+            position: absolute;
+            left: 45%;
+            content: "";
+            top: 100%;
+            width: 10%;
+            height: 3px;
+            background-color: $blue;
+        }
+        }
+    #about-text{
+        margin-top: 20px;
+        p{
+            font-size: 1.5rem;
+            span{
+                margin-right: 15px;
+                color: $blue;
+                font-size: 2.4rem;
+            }
+        }
+    }
+    img{
+        margin-top: -150px;
+        height: 550px;
+        width: 550px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #about img {
+        margin-top: -30px;
+        height: 400px;
+        width: 400px;
+    }
+}
+
+#contact {
+    padding: 60px 10rem;
+    position: relative;
+    h1{
+        text-align: center;
+        color: $blue;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 10px;
+        &::after{
+            position: absolute;
+            left: 40%;
+            content: "";
+            top: 100%;
+            width: 20%;
+            height: 3px;
+            background-color: $blue;
+        }
+        }
+        #form{
+            label {
+                font-size: 1.7rem;
+                color: $blue;
+                font-style: italic;
+            }
+            input , textarea{
+                padding: 10px ;
+                background-color: $grey;
+                &:focus {
+                    background-color: $white;
+                }
+            }
+            button {
+                padding: 0 50px;
+                font-size: 1.7rem;
+                &:hover{
+                    background-color: $blue;
+                }
+            }
+        }
+        .fwave{
+            position: absolute;
+            bottom: -37%;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+        }
+}
+
+@media only screen and (max-width: 768px) {
+    #contact {
+        padding: 30px 2rem;
+    }
+}
+
+
+// footer 
+
+#footer {
+    z-index: 3;
+    position: relative;
+    background-color: $blue;
+    color: $white;
+    margin-top: 80px;
+    #upper-text {
+        margin-left: 120px;
+    }
+}
